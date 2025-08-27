@@ -1,0 +1,24 @@
+#go run main.go London.map waterloo st_pancras 1
+#go run main.go London.map waterloo st_pancras 2
+#go run main.go London.map waterloo st_pancras 3
+#go run main.go London.map waterloo st_pancras 4
+#go run main.go London.map waterloo st_pancras 100
+stations:
+waterloo,3,1
+victoria,6,7
+euston,11,23
+st_pancras,5,15
+#victoria,6,-7 #Not positive integers
+#euston,3,7 #Duplicate station name
+#euston,6,7 #Two stations exist at the same coordinates
+
+
+connections:
+waterloo-victoria
+waterloo-euston
+st_pancras-euston
+victoria-st_pancras
+#victoria-euston #No path exists between waterloo and st_pancras
+#euston-waterloo #Duplicate route reverse
+#waterloo-euston #Duplicate route
+#water-euston #A connection is made with a station which does not exist
